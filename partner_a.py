@@ -33,11 +33,20 @@ valid = []
 
 for i, r in enumerate(readings):
     try:
+<<<<<<< HEAD
         temp = float(r)           # <-- this line crashes on bad strings
         print(f'Reading [{i}]: {temp}')
         valid.append(temp)
     except ValueError:
         print(f'Bad at [{i}]: {r}')
+=======
+        temp = float(r)   
+        print(f'OK: {r}')
+        print(f'Reading [{i}]: {temp}')
+        valid.append(temp)
+    except ValueError:
+        print(f'Bad value at [index {i}]: {r}')
+>>>>>>> 33fb2141f60199f27b149a3d91232b13193b06f1
 
 average = sum(valid) / len(valid)
 print(f'Average of valid readings: {round(average, 2)}')
